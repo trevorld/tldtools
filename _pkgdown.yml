@@ -1,0 +1,6 @@
+destination: "../../websites/R/tldtools/"
+url: "https://trevorldavis.com/R/tldtools"
+development:
+    mode: auto
+template:
+  bootstrap: 5
