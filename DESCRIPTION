@@ -11,7 +11,7 @@ Depends:
     R (>= 4.1)
 Imports:
     cli,
-    tibble
+    ghcli
 Remotes: trevorld/ghcli
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
