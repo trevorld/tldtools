@@ -101,6 +101,6 @@ use_tld_github_settings <- function(...,
                         enable_projects = enable_projects,
                         enable_rebase_merge = enable_rebase_merge,
                         enable_squash_merge = enable_squash_merge,
-                        enable_wiki)
+                        enable_wiki = enable_wiki)
     invisible(NULL)
 }
