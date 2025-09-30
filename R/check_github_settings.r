@@ -1,6 +1,6 @@
 #' Check GitHub settings
 #'
-#' `check_github_settings()` checks GitHub settings
+#' `check_github_settings()` checks GitHub settings.
 #' @examples
 #' \dontrun{
 #'   # requires `gh` installed and authenticated and working directory in Github repository
@@ -73,7 +73,7 @@ check_github_settings <- function() {
 
 #' Use Trevor's preferred GitHub settings
 #'
-#' `use_tld_github_settings()` uses Trevor's preferred GitHub settings
+#' `use_tld_github_settings()` uses Trevor's preferred GitHub settings.
 #' @examples
 #' \dontrun{
 #'   # requires `gh` installed and authenticated and working directory in Github repository
@@ -81,7 +81,7 @@ check_github_settings <- function() {
 #' }
 #' @inheritParams ghcli::gh_repo_edit
 #' @param ... Passed to [ghcli::gh_repo_edit()]
-#' @return `NULL` invisibly.  As a side effect sets GitHub settings.
+#' @return `NULL` invisibly.  As a side effect edits GitHub settings.
 #' @seealso [check_github_settings()]
 #' @export
 use_tld_github_settings <- function(...,
