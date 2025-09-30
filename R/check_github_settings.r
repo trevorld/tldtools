@@ -7,6 +7,7 @@
 #'   check_github_settings()
 #' }
 #' @return `NULL` invisibly.  As a side effect prints a message.
+#' @seealso [use_tld_github_settings()]
 #' @export
 check_github_settings <- function() {
      fields <- c(
@@ -25,7 +26,7 @@ check_github_settings <- function() {
          "squashMergeAllowed",
          "visibility"
      )
-    l <- gh_repo_view(fields = fields)
+    l <- ghcli::gh_repo_view(fields = fields)
     mca <- isTRUE(l[["mergeCommitAllowed"]])
     sqa <- isTRUE(l[["squashMergeAllowed"]])
     rma <- isTRUE(l[["rebaseMergeAllowed"]])
@@ -70,3 +71,36 @@ check_github_settings <- function() {
     invisible(NULL)
 }
 
+#' Use Trevor's preferred GitHub settings
+#'
+#' `use_tld_github_settings()` uses Trevor's preferred GitHub settings
+#' @examples
+#' \dontrun{
+#'   # requires `gh` installed and authenticated and working directory in Github repository
+#'   use_tld_github_settings()
+#' }
+#' @inheritParams ghcli::gh_repo_edit
+#' @param ... Passed to [ghcli::gh_repo_edit()]
+#' @return `NULL` invisibly.  As a side effect sets GitHub settings.
+#' @seealso [check_github_settings()]
+#' @export
+use_tld_github_settings <- function(...,
+                                    delete_branch_on_merge = TRUE,
+                                    enable_discussions = FALSE,
+                                    enable_issues = TRUE,
+                                    enable_merge_commit = FALSE,
+                                    enable_projects = FALSE,
+                                    enable_rebase_merge = TRUE,
+                                    enable_squash_merge = TRUE,
+                                    enable_wiki = FALSE) {
+    ghcli::gh_repo_edit(...,
+                        delete_branch_on_merge = delete_branch_on_merge,
+                        enable_discussions = enable_discussions,
+                        enable_issues = enable_issues,
+                        enable_merge_commit = enable_merge_commit,
+                        enable_projects = enable_projects,
+                        enable_rebase_merge = enable_rebase_merge,
+                        enable_squash_merge = enable_squash_merge,
+                        enable_wiki)
+    invisible(NULL)
+}

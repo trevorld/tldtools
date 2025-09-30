@@ -18,3 +18,6 @@ check_github_settings()
   check_github_settings()
 }
 }
+\seealso{
+\code{\link[=use_tld_github_settings]{use_tld_github_settings()}}
+}
