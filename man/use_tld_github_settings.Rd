@@ -36,10 +36,10 @@ use_tld_github_settings(
 \item{enable_wiki}{Either \code{NULL}, \code{TRUE}, or \code{FALSE}.}
 }
 \value{
-\code{NULL} invisibly.  As a side effect sets GitHub settings.
+\code{NULL} invisibly.  As a side effect edits GitHub settings.
 }
 \description{
-\code{use_tld_github_settings()} uses Trevor's preferred GitHub settings
+\code{use_tld_github_settings()} uses Trevor's preferred GitHub settings.
 }
 \examples{
 \dontrun{

@@ -10,7 +10,7 @@ check_github_settings()
 \code{NULL} invisibly.  As a side effect prints a message.
 }
 \description{
-\code{check_github_settings()} checks GitHub settings
+\code{check_github_settings()} checks GitHub settings.
 }
 \examples{
 \dontrun{

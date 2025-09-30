@@ -30,6 +30,17 @@ set an appropriate `GITHUB_TOKEN` environmental variable.
 ``` r
 # requires `gh` installed and authenticated and working directory in Github repository
 library("tldtools")
+check_github_labels()
+```
+
+```
+## ✔ GitHub does not have extra labels
+## ✔ GitHub is not missing labels
+## ✔ Label descriptions are as expected
+## ✔ Label colors are as expected
+```
+
+``` r
 check_github_settings()
 ```
 

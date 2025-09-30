@@ -1,6 +1,6 @@
 Package: tldtools
 Title: Trevor's Development Tools
-Version: 0.0.1-1
+Version: 0.0.1-2
 Authors@R: c(person("Trevor L.", "Davis", role = c("aut", "cre"),
                     email = "trevor.l.davis@gmail.com",
                     comment = c(ORCID = "0000-0001-6341-4639")))
@@ -11,7 +11,10 @@ Depends:
     R (>= 4.1)
 Imports:
     cli,
-    ghcli
+    dplyr,
+    ghcli (>= 0.0.1-10),
+    purrr,
+    tibble
 Remotes: trevorld/ghcli
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
