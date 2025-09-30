@@ -91,10 +91,15 @@ check_github_labels <- function() {
 #' @export
 use_tld_github_labels <- function() {
     df <- ghcli::gh_label_list()
-    to_edit <- union(intersect(tld_github_labels$to_edit, df$name),
-                     intersect(tld_github_labels$name, df$name))
+
+    to_edit <- intersect(tld_github_labels$to_edit, df$name)
     df_to_edit <- tld_github_labels[which(tld_github_labels$to_edit %in% to_edit), ]
     l <- purrr::pmap(df_to_edit, ghcli::gh_label_edit)
+
+    to_edit2 <- intersect(tld_github_labels$name, df$name)
+    df_to_edit2 <- tld_github_labels[which(tld_github_labels$name %in% to_edit2), 1:3] |>
+        dplyr::rename(to_edit = name)
+    l <- purrr::pmap(df_to_edit2, ghcli::gh_label_edit)
 
     df <- ghcli::gh_label_list()
     to_add <- setdiff(tld_github_labels$name, df$name)
