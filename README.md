@@ -51,6 +51,21 @@ check_github_settings()
 ## ✔ GitHub feature settings okay
 ```
 
+
+``` r
+library("tldtools")
+check_air()
+```
+
+```
+## ✔ `.air.toml` is as expected
+## ✔ `.editorconfig` is as expected
+## ✔ `.pre-commit-config.yaml` is as expected
+## ✔ `.github/workflows/air-check.yaml` is as expected
+## ✔ Pre-commit hook installed
+## ✔ Expected patterns in `.Rbuildignore`
+```
+
 ## <a name="links">Related Links</a>
 
 * [`{ghcli}` R package](https://github.com/trevorld/ghcli)
