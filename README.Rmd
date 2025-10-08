@@ -33,6 +33,11 @@ check_github_labels()
 check_github_settings()
 ```
 
+```{r check_air}
+library("tldtools")
+check_air()
+```
+
 ## <a name="links">Related Links</a>
 
 * [`{ghcli}` R package](https://github.com/trevorld/ghcli)
