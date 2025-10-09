@@ -30,6 +30,18 @@ set an appropriate `GITHUB_TOKEN` environmental variable.
 ``` r
 # requires `gh` installed and authenticated and working directory in Github repository
 library("tldtools")
+check_github_actions()
+```
+
+```
+## ✔ `.github/workflows/R-CMD-check.yaml` is as expected
+## ✔ `.github/workflows/air-check.yaml` is as expected
+## ✖ `.github/workflows/test-coverage.yaml` does not exist
+## ✔ Expected patterns in `.Rbuildignore`
+## ✖ `CODECOV_TOKEN` is not a repository secret
+```
+
+``` r
 check_github_labels()
 ```
 
@@ -68,5 +80,6 @@ check_air()
 
 ## <a name="links">Related Links</a>
 
+* [`{devtools}` R package](https://github.com/r-lib/devtools)
 * [`{ghcli}` R package](https://github.com/trevorld/ghcli)
 * [`{usethis}` R package](https://github.com/r-lib/usethis)
