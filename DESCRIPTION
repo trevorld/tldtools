@@ -1,6 +1,6 @@
 Package: tldtools
 Title: Trevor's Development Tools
-Version: 0.0.1-8
+Version: 0.0.1-9
 Authors@R: c(person("Trevor L.", "Davis", role = c("aut", "cre"),
                     email = "trevor.l.davis@gmail.com",
                     comment = c(ORCID = "0000-0001-6341-4639")))
@@ -11,6 +11,7 @@ Depends:
     R (>= 4.1)
 Imports:
     cli,
+	devtools,
     dplyr,
     ghcli (>= 0.0.1-11),
     purrr,
