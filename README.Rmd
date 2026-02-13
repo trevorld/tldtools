@@ -39,6 +39,11 @@ library("tldtools")
 check_air()
 ```
 
+```{r check_filenames}
+library("tldtools")
+check_filenames()
+```
+
 ## <a name="links">Related Links</a>
 
 * [`{devtools}` R package](https://github.com/r-lib/devtools)

@@ -78,6 +78,16 @@ check_air()
 ## ✔ Expected patterns in `.Rbuildignore`
 ```
 
+
+``` r
+library("tldtools")
+check_filenames()
+```
+
+```
+## ✔ All R files use `.R` extension
+```
+
 ## <a name="links">Related Links</a>
 
 * [`{devtools}` R package](https://github.com/r-lib/devtools)
