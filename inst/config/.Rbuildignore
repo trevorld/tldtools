@@ -1,3 +1,4 @@
+^AGENTS.md$
 ^CONTRIBUTING$
 ^LICENSE.md$
 ^README.Rmd$
@@ -6,6 +7,7 @@
 ^README.rst$
 ^Rakefile$
 ^\.air.toml$
+^\.claude$
 ^\.editorconfig$
 ^\.git$
 ^\.github$
@@ -18,4 +20,5 @@
 ^pkgdown$
 ^raw-data$
 ^revdep$
+^share$
 ^tmp$
