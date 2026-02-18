@@ -10,7 +10,8 @@ check_filenames()
 \code{NULL} invisibly.  As a side effect prints a message.
 }
 \description{
-\code{check_filenames()} checks that all R files use \code{.R} extension instead of \code{.r}.
+\code{check_filenames()} checks that all R files use \code{.R} extension instead of \code{.r}
+and that there is no \code{raw-data} directory (use \code{data-raw} instead).
 }
 \examples{
 \dontrun{

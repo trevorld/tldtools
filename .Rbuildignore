@@ -16,9 +16,9 @@
 ^_pkgdown.yml$
 ^codecov.yml$
 ^cran-comments.md$
+^data-raw$
 ^docs$
 ^pkgdown$
-^raw-data$
 ^revdep$
 ^share$
 ^tmp$

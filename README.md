@@ -86,6 +86,7 @@ check_filenames()
 
 ```
 ## ✔ All R files use `.R` extension
+## ✔ No `raw-data` directory found
 ```
 
 ## <a name="links">Related Links</a>

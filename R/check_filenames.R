@@ -1,6 +1,7 @@
 #' Check R file extensions
 #'
-#' `check_filenames()` checks that all R files use `.R` extension instead of `.r`.
+#' `check_filenames()` checks that all R files use `.R` extension instead of `.r`
+#' and that there is no `raw-data` directory (use `data-raw` instead).
 #' @examples
 #' \dontrun{
 #'   check_filenames()
@@ -13,12 +14,18 @@ check_filenames <- function() {
 
 	r_files <- list.files(".", pattern = "\\.r$", recursive = TRUE)
 	if (length(r_files)) {
-		message <- c("x" = "{length(r_files)} R files use an `.r` extension instead of `.R`")
+		msg_r <- c("x" = "{length(r_files)} R files use an `.r` extension instead of `.R`")
 	} else {
-		message <- c("v" = "All R files use `.R` extension")
+		msg_r <- c("v" = "All R files use `.R` extension")
 	}
 
-	cli_inform(message, class = "tldtools_check_filenames")
+	if (dir.exists("raw-data")) {
+		msg_dir <- c("x" = "Directory `raw-data` exists, use `data-raw` instead")
+	} else {
+		msg_dir <- c("v" = "No `raw-data` directory found")
+	}
+
+	cli_inform(c(msg_r, msg_dir), class = "tldtools_check_filenames")
 	invisible(NULL)
 }
 
