@@ -15,6 +15,7 @@ check_all <- function() {
 	check_github_actions()
 	check_github_labels()
 	check_github_settings()
+	check_github_sponsors()
 	invisible(NULL)
 }
 
@@ -38,6 +39,7 @@ use_tld_all <- function() {
 	use_tld_github_actions()
 	use_tld_github_labels()
 	use_tld_github_settings()
+	use_tld_github_sponsors()
 
 	invisible(NULL)
 }

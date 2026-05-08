@@ -21,4 +21,5 @@
 ^pkgdown$
 ^revdep$
 ^share$
+^tests/testthat/Rplots.pdf$
 ^tmp$
