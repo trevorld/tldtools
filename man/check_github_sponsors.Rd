@@ -14,6 +14,7 @@ check_github_sponsors()
 }
 \examples{
 \dontrun{
+  # requires `gh` installed and authenticated and working directory in Github repository
   check_github_sponsors()
 }
 }
