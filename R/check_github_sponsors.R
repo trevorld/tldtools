@@ -3,6 +3,7 @@
 #' `check_github_sponsors()` checks the GitHub sponsor button setup.
 #' @examples
 #' \dontrun{
+#'   # requires `gh` installed and authenticated and working directory in Github repository
 #'   check_github_sponsors()
 #' }
 #' @return `NULL` invisibly.  As a side effect prints a message.
@@ -14,6 +15,20 @@ check_github_sponsors <- function() {
 	message <- character(0L)
 	message <- c(message, check_file(".github/FUNDING.yml"))
 	message <- c(message, check_Rbuildignore("^\\.github$"))
+
+	nwo <- ghcli::gh_repo_view(fields = "nameWithOwner")[["nameWithOwner"]]
+	parts <- strsplit(nwo, "/")[[1L]]
+	result <- ghcli::gh_api_graphql(
+		'query($owner: String!, $name: String!) {
+		    repository(owner: $owner, name: $name) { hasSponsorshipsEnabled }
+		}',
+		variables = list(owner = parts[1L], name = parts[2L])
+	)
+	if (isTRUE(result[["repository"]][["hasSponsorshipsEnabled"]])) {
+		message <- c(message, "v" = "GitHub Sponsors button enabled")
+	} else {
+		message <- c(message, "x" = "GitHub Sponsors button not enabled")
+	}
 
 	cli_inform(message, class = "tldtools_check_github_sponsors")
 	invisible(NULL)
